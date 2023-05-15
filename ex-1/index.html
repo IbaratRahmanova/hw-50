@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone/babel.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="root"></div>
 
+<script type="text/babel">
+    const Card = props => {
+        return (
+            <div className="card">
+                <img src={props.url} alt={props.name}/>
+                <h2>{props.name}</h2>
+                <p>{props.aboutFilm}</p>
+            </div>
+        );
+    };
+
+    const cards = (
+        <div className="cards">
+            <Card url="https://www.maxxi.art/wp-content/uploads/2018/02/CinemaAlMAXXI_Interstellar.jpg"
+                  name="Interstellar" aboutFilm="2014, Fantazy, drama, advanture"/>
+            <Card url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpWgd14vHXuyt5UlrHkcQPi1_8VCODujK11g&usqp=CAU"
+                  name="Всадник без головы" aboutFilm="1973, мелодрама, приключения, вестерн"/>
+            <Card url="https://www.hollywoodreporter.com/wp-content/uploads/2015/05/grimm_h_15.jpg?w=1024"
+                  name="Grimm" aboutFilm="TV Series 2011-2017"/>
+        </div>
+    );
+
+    const root = document.getElementById('root');
+    ReactDOM.createRoot(root).render(cards);
+
+</script>
 </body>
 </html>
