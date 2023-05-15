@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone/babel.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="root"></div>
+
+<script type="text/babel">
+    const Header = () => {
+        return (
+                <header className="header">
+                    <div className="container">
+                        <a href="#" className="logo">
+                            <img src="../images/logo.png" alt="nerds"/>
+                        </a>
+                    </div>
+                </header>
+        );
+    };
+
+    const NavBar = props => {
+        return (
+                <nav className="main-nav">
+                    <div className="container">
+                        <a href="#" className="main-link">{props.studioLink}</a>
+                        <a href="#" className="main-link">Клиенты</a>
+                        <a href="#" className="main-link">Магазин</a>
+                        <a href="#" className="main-link">Контакты</a>
+                    </div>
+                </nav>
+        );
+    };
+
+
+    const webSite = (
+            <React.Fragment>
+                <Header/>
+                <NavBar studioLink="Студия"
+                />
+            </React.Fragment>
+    );
+
+    const root = document.getElementById('root');
+    ReactDOM.createRoot(root).render(webSite);
+</script>
 
 </body>
 </html>
