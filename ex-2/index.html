@@ -92,6 +92,16 @@
             </div>
         );
     };
+    const Footer = props => {
+        return (
+            <footer className="footer">
+                <div className="container">
+                    <p className="footer main-text">{props.text1}</p>
+                    <p className="footer add-text">{props.text2}</p>
+                </div>
+            </footer>
+        );
+    };
 
     const webSite = (
         <React.Fragment>
@@ -119,6 +129,8 @@
                       list1="Веб-сайтов любой сложности"
                       list2="Мобильных приложений для iOS и Android"
                       list3="Слайдшоу и видео для корпоративных презентаций"/>
+            <Footer text1="Давайте дружить, это выгодно!"
+                    text2="Скидка 10% для друзей из социальных сетей."/>
         </React.Fragment>
     );
 
