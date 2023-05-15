@@ -35,8 +35,22 @@
                 </div>
             </nav>
         );
+
     };
 
+    const Content1 = props => {
+        return (
+            <div className="main-block">
+                <div className="container main-container">
+                    <div className="main-info">
+                        <h1 className="main-title">{props.mainTitle}</h1>
+                        <p className="main-subtitle">{props.subTitle}</p>
+                        <a href="#" className="know-more">{props.knowLink}</a>
+                    </div>
+                </div>
+            </div>
+        );
+    };
 
     const webSite = (
         <React.Fragment>
@@ -45,6 +59,9 @@
                     clientsLink="Клиенты"
                     shopLink="Магазин"
                     contactsLink="Контакты"/>
+            <Content1 mainTitle="Дизайн-студия из Краснодара"
+                      subTitle="Математически выверенный дизайн для вашего сайта или мобильного приложения."
+                      knowLink="Узнать больше"/>
         </React.Fragment>
     );
 
