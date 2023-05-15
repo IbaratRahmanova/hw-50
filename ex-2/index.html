@@ -51,6 +51,29 @@
             </div>
         );
     };
+    const Content2 = props => {
+        return (
+            <div className="container about-block">
+                <div className="boxes">
+                    <div className="box box-1">
+                        <h4 className="subtitle">{props.subTitle1}</h4>
+                        <p className="text">{props.text1}</p>
+                        <button className="btn btn-1">{props.btn1}</button>
+                    </div>
+                    <div className="box box-2">
+                        <h4 className="subtitle">{props.subTitle2}</h4>
+                        <p className="text">{props.text2}</p>
+                        <button className="btn btn-2">{props.btn2}</button>
+                    </div>
+                    <div className="box box-3">
+                        <h4 className="subtitle">{props.subTitle3}</h4>
+                        <p className="text">{props.text3}</p>
+                        <button className="btn btn-3">{props.btn3}</button>
+                    </div>
+                </div>
+            </div>
+        );
+    };
 
     const webSite = (
         <React.Fragment>
@@ -62,6 +85,15 @@
             <Content1 mainTitle="Дизайн-студия из Краснодара"
                       subTitle="Математически выверенный дизайн для вашего сайта или мобильного приложения."
                       knowLink="Узнать больше"/>
+            <Content2 subTitle1="Веб-сайты"
+            text1="Мир никогда не будет прежним после того как увидит ваш сайт!"
+            btn1="заказать"
+            subTitle2="Приложения"
+            text2="Покорите топ-10 приложений в AppStore и Google Play"
+            btn2="заказать"
+            subTitle3="Презентации"
+            text3="Вы даже не подозреваете, насколько вы изумительны!"
+            btn3="заказать"/>
         </React.Fragment>
     );
 
