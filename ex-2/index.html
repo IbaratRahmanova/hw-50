@@ -74,6 +74,24 @@
             </div>
         );
     };
+    const Content3 = props => {
+        return (
+            <div className="container">
+                <section className="section main-section">
+                    <div className="section-info">
+                        <h2 className="section-title">{props.title}</h2>
+                        <p className="section-subtitle">{props.subTitle}</p>
+                        <p className="section-text">{props.text}</p>
+                        <ul className="list">
+                            <li className="all-list">{props.list1}</li>
+                            <li className="all-list">{props.list2}</li>
+                            <li className="all-list">{props.list3}</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        );
+    };
 
     const webSite = (
         <React.Fragment>
@@ -86,14 +104,21 @@
                       subTitle="Математически выверенный дизайн для вашего сайта или мобильного приложения."
                       knowLink="Узнать больше"/>
             <Content2 subTitle1="Веб-сайты"
-            text1="Мир никогда не будет прежним после того как увидит ваш сайт!"
-            btn1="заказать"
-            subTitle2="Приложения"
-            text2="Покорите топ-10 приложений в AppStore и Google Play"
-            btn2="заказать"
-            subTitle3="Презентации"
-            text3="Вы даже не подозреваете, насколько вы изумительны!"
-            btn3="заказать"/>
+                      text1="Мир никогда не будет прежним после того как увидит ваш сайт!"
+                      btn1="заказать"
+                      subTitle2="Приложения"
+                      text2="Покорите топ-10 приложений в AppStore и Google Play"
+                      btn2="заказать"
+                      subTitle3="Презентации"
+                      text3="Вы даже не подозреваете, насколько вы изумительны!"
+                      btn3="заказать"/>
+            <Content3 title="Мы — маленькая, но гордая дизайн-студия из Краснодара."
+                      subTitle="Исповедуем принципы минимализма и чистоты. Ставим математический
+                            расчет превыше креатива. Работаем не покладая рук, как роботы."
+                      text="Выполняем заказы на разработку:"
+                      list1="Веб-сайтов любой сложности"
+                      list2="Мобильных приложений для iOS и Android"
+                      list3="Слайдшоу и видео для корпоративных презентаций"/>
         </React.Fragment>
     );
 
