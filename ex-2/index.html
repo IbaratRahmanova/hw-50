@@ -24,10 +24,10 @@
         );
     };
 
-    const NavBar = props => {
+    const Sidebar = props => {
         return (
             <nav className="main-nav">
-                <div className="container">
+                <div className="container group_links">
                     <a href="#" className="main-link">{props.studioLink}</a>
                     <a href="#" className="main-link">{props.clientsLink}</a>
                     <a href="#" className="main-link">{props.shopLink}</a>
@@ -35,7 +35,6 @@
                 </div>
             </nav>
         );
-
     };
 
     const Content1 = props => {
@@ -106,13 +105,18 @@
     const webSite = (
         <React.Fragment>
             <Header/>
-            <NavBar studioLink="Студия"
-                    clientsLink="Клиенты"
-                    shopLink="Магазин"
-                    contactsLink="Контакты"/>
-            <Content1 mainTitle="Дизайн-студия из Краснодара"
-                      subTitle="Математически выверенный дизайн для вашего сайта или мобильного приложения."
-                      knowLink="Узнать больше"/>
+            <div className="main">
+                <div className="container">
+                    <Sidebar studioLink="Студия"
+                             clientsLink="Клиенты"
+                             shopLink="Магазин"
+                             contactsLink="Контакты"/>
+                    <Content1 mainTitle="Дизайн-студия из Краснодара"
+                              subTitle="Математически выверенный дизайн для вашего сайта или мобильного приложения."
+                              knowLink="Узнать больше"/>
+                </div>
+
+            </div>
             <Content2 subTitle1="Веб-сайты"
                       text1="Мир никогда не будет прежним после того как увидит ваш сайт!"
                       btn1="заказать"
@@ -137,6 +141,5 @@
     const root = document.getElementById('root');
     ReactDOM.createRoot(root).render(webSite);
 </script>
-
 </body>
 </html>

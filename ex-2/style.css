@@ -23,6 +23,7 @@ body {
     text-align: center;
     background: #494e55;
     padding: 15px 0;
+    width: 20%;
 }
 
 .main-link {
@@ -30,18 +31,19 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    margin: 0 15px;
+    margin: 20px 15px;
 }
 
 .main-block {
     background:  #eee;
+    width: 80%;
 }
 
 .main-container {
     background-image: url(../images/main-pic.png);
     background-repeat: no-repeat;
     background-position: right bottom;
-    padding: 40px 100px;
+    padding: 40px 120px;
 }
 
 .main-info {
@@ -181,3 +183,16 @@ body {
 .add-text {
     font-size: 16px;
    }
+
+.main {
+    background: #eee;
+}
+
+.main .container {
+    display: flex;
+}
+
+.group_links {
+    display: flex;
+    flex-direction: column;
+}
